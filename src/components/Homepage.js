@@ -214,7 +214,9 @@ function Homepage() {
       {/*fold 6*/}
       <div className="bg-[#FED500] text-center py-[50px] mt-[50px]">
         <div className="text-[40px] font-bold pb-[30px]">Getting Started is Easy</div>
-        <button className="bg-[#F0483E] text-[#FFFFFF] font-bold py-[15px] px-[100px] rounded-[5px]">START YOUR FREE TRAIL</button>
+        <a target="_blank" href="https://store.zoho.eu/ResellerCustomerSignUp.do?id=c0bf4dcdc60b1cb866e66e98e788deca">
+          <button className="bg-[#F0483E] text-[#FFFFFF] font-bold py-[15px] px-[100px] rounded-[5px]">START YOUR FREE TRAIL</button>
+        </a>
       </div>
 
     </div>
