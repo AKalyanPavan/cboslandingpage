@@ -27,7 +27,7 @@ function Homepage() {
               Replace your patchwork of cloud applications, legacy tools, and paper-based processes with one operating system for your entire business.
             </div>
             <a target="_blank" href="https://store.zoho.eu/ResellerCustomerSignUp.do?id=c0bf4dcdc60b1cb866e66e98e788deca">
-              <button className="bg-[#F0483E] text-[#FFFFFF] font-bold py-[15px] px-[20px] rounded-[5px] mt-[50px]">START YOUR FREE TRAIL</button>
+              <button className="bg-[#F0483E] text-[#FFFFFF] font-bold py-[15px] px-[20px] rounded-[5px] mt-[50px]">START YOUR FREE TRIAL</button>
             </a>
           </div>
         </div>
@@ -215,7 +215,7 @@ function Homepage() {
       <div className="bg-[#FED500] text-center py-[50px] mt-[50px]">
         <div className="text-[40px] font-bold pb-[30px]">Getting Started is Easy</div>
         <a target="_blank" href="https://store.zoho.eu/ResellerCustomerSignUp.do?id=c0bf4dcdc60b1cb866e66e98e788deca">
-          <button className="bg-[#F0483E] text-[#FFFFFF] font-bold py-[15px] px-[100px] rounded-[5px]">START YOUR FREE TRAIL</button>
+          <button className="bg-[#F0483E] text-[#FFFFFF] font-bold py-[15px] px-[100px] rounded-[5px]">START YOUR FREE TRIAL</button>
         </a>
       </div>
 
