@@ -14,11 +14,11 @@ function Homepage() {
   return (
     <div className="font-inter">
       {/*fold 1*/}
-      <div className="bg-[#FED500] pt-[0px] pb-[80px]">
+      <div className="bg-[#FED500] pt-[50px] pb-[80px]">
         <div className="mb-[30px] ml-[80px]">
           <img src={grouplogo} />
         </div>
-        <div className="flex justify-center mx-[auto] mt-[100px]">
+        <div className="flex justify-center mx-[auto] mt-[10px]">
           <div className="w-[1000px] text-center">
             <div className="text-[45px] font-bold leading-[48px] mb-[20px]">
               Go from Apps to Operating System
