@@ -11,6 +11,130 @@ import logo from './../images/logo.png'
 import grouplogo from './../images/group.png'
 
 function Homepage() {
+
+  function onEurGpbClicked(tag) {
+
+    var eur = document.getElementById("eur");
+    var gpb = document.getElementById("gpb");
+
+    var monthly = document.getElementById("monthly");
+    var yearly = document.getElementById("yearly");
+
+    var currencySymbol = document.getElementsByClassName("currencySymbol");
+
+    var monthlyPricing = document.getElementById("monthlyPricing");
+    var yearlyPricing = document.getElementById("yearlyPricing");
+
+    var billedAnually = document.getElementsByClassName("billedAnually");
+
+    if (tag == "#eur") {
+
+      eur.classList.remove("text-[#bbbbbb]");
+      eur.classList.add("font-bold");
+      gpb.classList.add("text-[#bbbbbb]");
+      gpb.classList.remove("font-bold");
+      gpb.classList.remove("text-[#000000]");
+
+      currencySymbol[0].innerHTML = "€";
+      currencySymbol[1].innerHTML = "€";
+
+      if (billedAnually[0].classList.contains("hidden")) {
+        monthlyPricing.innerHTML = "45";
+        yearlyPricing.innerHTML = "105";
+      } else {
+        monthlyPricing.innerHTML = "37";
+        yearlyPricing.innerHTML = "90";
+      }
+
+    } else if (tag == "#gpb") {
+
+      gpb.classList.remove("text-[#bbbbbb]");
+      gpb.classList.add("font-bold");
+      eur.classList.add("text-[#bbbbbb]");
+      eur.classList.remove("font-bold");
+      eur.classList.remove("text-[#000000]");
+
+      currencySymbol[0].innerHTML = "£";
+      currencySymbol[1].innerHTML = "£";
+
+      if (billedAnually[0].classList.contains("hidden")) {
+        monthlyPricing.innerHTML = "45";
+        yearlyPricing.innerHTML = "100";
+      } else {
+        monthlyPricing.innerHTML = "37";
+        yearlyPricing.innerHTML = "80";
+      }
+
+    }
+
+  }
+
+  function onMonthlyYearlyClicked(tag) {
+
+    var eur = document.getElementById("eur");
+    var gpb = document.getElementById("gpb");
+
+    var monthly = document.getElementById("monthly");
+    var yearly = document.getElementById("yearly");
+
+    var currencySymbol = document.getElementsByClassName("currencySymbol");
+
+    var monthlyPricing = document.getElementById("monthlyPricing");
+    var yearlyPricing = document.getElementById("yearlyPricing");
+
+    var billedAnually = document.getElementsByClassName("billedAnually");
+
+    var perUser = document.getElementById("perUser");
+    var perEmployee = document.getElementById("perEmployee");
+
+    if (tag == "#monthly") {
+
+      monthly.classList.remove("text-[#bbbbbb]");
+      monthly.classList.add("font-bold");
+      yearly.classList.add("text-[#bbbbbb]");
+      yearly.classList.remove("font-bold");
+      yearly.classList.remove("text-[#000000]");
+
+      if(currencySymbol[0].innerHTML == "€") {
+        monthlyPricing.innerHTML = "45";
+        yearlyPricing.innerHTML = "105";
+      } else if(currencySymbol[0].innerHTML == "£") {
+        monthlyPricing.innerHTML = "45";
+        yearlyPricing.innerHTML = "100";
+      }
+
+      billedAnually[0].classList.add("hidden");
+      billedAnually[1].classList.add("hidden");
+
+      perUser.innerHTML = "/user";
+      perEmployee.innerHTML = "/employee";
+
+    } else if (tag == "#yearly") {
+
+      yearly.classList.remove("text-[#bbbbbb]");
+      yearly.classList.add("font-bold");
+      monthly.classList.add("text-[#bbbbbb]");
+      monthly.classList.remove("font-bold");
+      monthly.classList.remove("text-[#000000]");
+
+      if(currencySymbol[0].innerHTML == "€") {
+        monthlyPricing.innerHTML = "37";
+        yearlyPricing.innerHTML = "90";
+      } else if(currencySymbol[0].innerHTML == "£") {
+        monthlyPricing.innerHTML = "37";
+        yearlyPricing.innerHTML = "80";
+      }
+
+      billedAnually[0].classList.remove("hidden");
+      billedAnually[1].classList.remove("hidden");
+
+      perUser.innerHTML = "/user/month";
+      perEmployee.innerHTML = "/employee/month";
+
+    }
+
+  }
+
   return (
     <div className="font-inter">
       {/*fold 1*/}
@@ -212,7 +336,52 @@ function Homepage() {
       </div>
 
       {/*fold 6*/}
-      <div className="bg-[#FED500] text-center py-[50px] mt-[50px]">
+      <div className="text-center mt-[50px] bg-[#F6F3E8] py-[30px]">
+        <div className="w-fit mx-auto">
+
+        <div className="text-[25px] font-semibold mb-[30px]">Pinch yourself</div>
+
+        <div className="mb-[30px] flex justify-between">
+          <div className="text-left">
+            <span id="eur" className="underline underline-offset-8 decoration-[3px] font-bold text-[#000000] cursor-pointer" onClick={() => onEurGpbClicked('#eur')}>EUR &nbsp;</span>
+            <span id="gpb" className="underline underline-offset-8 decoration-[3px] text-[#bbbbbb] cursor-pointer" onClick={() => onEurGpbClicked('#gpb')}>&nbsp; GPB</span>
+          </div>
+          <div className="text-right">
+            <span id="monthly" className="underline underline-offset-8 decoration-[3px] text-[#bbbbbb] cursor-pointer" onClick={() => onMonthlyYearlyClicked('#monthly')}>Monthly &nbsp;</span>
+            <span id="yearly" className="underline underline-offset-8 decoration-[3px] font-bold text-[#000000] cursor-pointer" onClick={() => onMonthlyYearlyClicked('#yearly')}>&nbsp; Yearly</span>
+          </div>
+        </div>
+
+        <div className="min-[800px]:flex justify-center">
+          <div className="h-[350px] min-[400px]:w-[360px] w-[300px] bg-[#fed703] max-[800px]:mx-auto py-[40px] px-[20px]">
+            <div className="font-semibold text-[17px]">ALL EMPLOYEE PRICING</div>
+            <div className="flex items-center justify-center">
+              <span class="currencySymbol" className="currencySymbol text-[28px] font-semibold mb-[18px]">€</span>
+              <span id="monthlyPricing" className="text-[52px] font-semibold">37</span>
+            </div>
+            <div id="perEmployee">/employee/month</div>
+            <div className="billedAnually">billed annually</div>
+            <div className="font-semibold my-[20px]">Must purchase license for ALL employees*</div>
+            <button className="bg-[#F0483E] text-[#FFFFFF] font-bold py-[10px] px-[30px]">TRY NOW</button>
+          </div>
+          <div className="h-[350px] min-[400px]:w-[360px] w-[300px] bg-[#fed703] max-[800px]:mx-auto py-[40px] px-[20px] max-[799px]:mt-[30px] min-[800px]:ml-[30px]">
+            <div className="font-semibold text-[17px]">FLEXIBLE USER PRICING</div>
+            <div className="flex items-center justify-center">
+              <span class="currencySymbol" className="currencySymbol text-[28px] font-semibold mb-[18px]">€</span>
+              <span id="yearlyPricing" className="text-[52px] font-semibold">90</span>
+            </div>
+            <div id="perUser">/user/month</div>
+            <div className="billedAnually">billed annually</div>
+            <div className="font-semibold my-[20px]">Purchase license for any no. of users</div>
+            <button className="bg-[#F0483E] text-[#FFFFFF] font-bold py-[10px] px-[30px]">TRY NOW</button>
+          </div>
+        </div>
+        <div className="min-[400px]:w-[360px] w-[300px] mx-auto text-[13px] mt-[20px]">Local taxes (VAT, GST, etc.) will be charged in addition to the prices mentioned.</div>
+        </div>
+      </div>
+
+      {/*fold 7*/}
+      <div className="bg-[#FED500] text-center py-[50px]">
         <div className="text-[40px] font-bold pb-[30px]">Getting Started is Easy</div>
         <a target="_blank" href="https://store.zoho.eu/ResellerCustomerSignUp.do?id=c0bf4dcdc60b1cb866e66e98e788deca">
           <button className="bg-[#F0483E] text-[#FFFFFF] font-bold py-[15px] px-[100px] rounded-[5px]">START YOUR FREE TRIAL</button>
