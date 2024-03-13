@@ -362,7 +362,9 @@ function Homepage() {
             <div id="perEmployee">/employee/month</div>
             <div className="billedAnually">billed annually</div>
             <div className="font-semibold my-[20px]">Must purchase license for ALL employees*</div>
-            <button className="bg-[#F0483E] text-[#FFFFFF] font-bold py-[10px] px-[30px]">TRY NOW</button>
+            <a target="_blank" href="https://store.zoho.eu/ResellerCustomerSignUp.do?id=c0bf4dcdc60b1cb866e66e98e788deca">
+              <button className="bg-[#F0483E] text-[#FFFFFF] font-bold py-[10px] px-[30px]">TRY NOW</button>
+            </a>
           </div>
           <div className="h-[350px] min-[400px]:w-[360px] w-[300px] bg-[#fed703] max-[800px]:mx-auto py-[40px] px-[20px] max-[799px]:mt-[30px] min-[800px]:ml-[30px]">
             <div className="font-semibold text-[17px]">FLEXIBLE USER PRICING</div>
@@ -373,7 +375,9 @@ function Homepage() {
             <div id="perUser">/user/month</div>
             <div className="billedAnually">billed annually</div>
             <div className="font-semibold my-[20px]">Purchase license for any no. of users</div>
-            <button className="bg-[#F0483E] text-[#FFFFFF] font-bold py-[10px] px-[30px]">TRY NOW</button>
+            <a target="_blank" href="https://store.zoho.eu/ResellerCustomerSignUp.do?id=c0bf4dcdc60b1cb866e66e98e788deca">
+              <button className="bg-[#F0483E] text-[#FFFFFF] font-bold py-[10px] px-[30px]">TRY NOW</button>
+            </a>
           </div>
         </div>
         <div className="min-[400px]:w-[360px] w-[300px] mx-auto text-[13px] mt-[20px]">Local taxes (VAT, GST, etc.) will be charged in addition to the prices mentioned.</div>
